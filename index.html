@@ -1,174 +1,97 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Para Minha Yasmim 💖</title>
-<style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: 'Arial Rounded MT Bold', 'Comic Sans MS', cursive;
-    background: linear-gradient(135deg, #ff9ecb 0%, #d9b3ff 50%, #a8d0ff 100%);
-    background-attachment: fixed;
-    min-height: 100vh;
-    overflow-x: hidden;
-    color: #4a2c4a;
-  }
-  .screen { display: none; padding: 40px 20px; text-align: center; min-height: 100vh; }
-  .screen.active { display: flex; flex-direction: column; justify-content: center; align-items: center; }
-  h1 { font-size: 3rem; color: #ff2d75; margin-bottom: 20px; text-shadow: 3px 3px 0 rgba(255,255,255,0.6); animation: float 3s ease-in-out infinite; }
-  @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
-  p { font-size: 1.2rem; margin-bottom: 25px; max-width: 600px; line-height: 1.7; }
-  button {
-    background: linear-gradient(135deg, #ff4d8d, #b388ff);
-    color: white; border: none; padding: 16px 35px;
-    border-radius: 25px; font-size: 1.1rem; cursor: pointer;
-    box-shadow: 0 8px 20px rgba(255,77,141,0.4);
-    transition: all 0.3s; font-family: inherit; margin: 10px;
-  }
-  button:hover { transform: scale(1.08) translateY(-3px); }
-  .hearts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 350px; margin: 30px auto; }
-  .heart-btn {
-    font-size: 3.5rem; background: rgba(255,255,255,0.4); 
-    border: 3px solid #ff9ecb; border-radius: 20px; padding: 15px; cursor: pointer; transition: all 0.3s;
-  }
-  .heart-btn:hover { transform: scale(1.1); }
-  .heart-btn.clicked { transform: scale(1.2) rotate(10deg); background: #ff4d8d; }
-  #counter { font-size: 1.3rem; font-weight: bold; color: #ff2d75; margin: 20px; }
-  .quiz-options { display: flex; flex-direction: column; gap: 15px; max-width: 400px; margin: 30px auto; }
-  .quiz-options button { background: linear-gradient(135deg, #b388ff, #a8d0ff); text-align: left; padding: 18px 25px; }
-  .stars-container {
-    position: relative; width: 90%; max-width: 400px; height: 300px;
-    background: rgba(255,255,255,0.3); border-radius: 25px;
-    margin: 30px auto; overflow: hidden; border: 3px solid #ffb3d1;
-  }
-  .star { position: absolute; font-size: 2.5rem; cursor: pointer; animation: twinkle 1.5s ease-in-out infinite; }
-  @keyframes twinkle { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.2); } }
-  #starsCount { font-size: 1.4rem; color: #ff2d75; font-weight: bold; }
-  .card {
-    background: rgba(255, 255, 255, 0.92); border-radius: 30px; padding: 35px; margin: 25px auto;
-    max-width: 700px; box-shadow: 0 15px 40px rgba(255, 77, 141, 0.25);
-    border: 4px solid #ffb3d1; opacity: 0; transform: translateY(40px);
-    animation: slideUp 0.7s forwards;
-  }
-  @keyframes slideUp { to { opacity: 1; transform: translateY(0); } }
-  .card h2 { color: #ff2d75; font-size: 2rem; margin-bottom: 15px; }
-  .floating { position: fixed; font-size: 2rem; animation: floatDown 10s linear infinite; pointer-events: none; z-index: 0; opacity: 0.7; }
-  @keyframes floatDown {
-    from { transform: translateY(-150px) rotate(0deg); opacity: 0; }
-    10% { opacity: 0.7; } 90% { opacity: 0.7; }
-    to { transform: translateY(100vh) rotate(360deg); opacity: 0; }
-  }
-  .progress-bar {
-    width: 80%; max-width: 400px; height: 12px;
-    background: rgba(255,255,255,0.4); border-radius: 10px;
-    margin: 20px auto; overflow: hidden;
-  }
-  .progress-fill {
-    height: 100%; background: linear-gradient(90deg, #ff4d8d, #b388ff);
-    width: 0%; transition: width 0.5s;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feliz Aniversário, Yaya</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #ffeef8 0%, #f8e8ff 100%);
+      font-family: 'Georgia', serif;
+      padding: 20px;
+      overflow-x: hidden;
+    }
+    
+    .container {
+      max-width: 700px;
+      background: white;
+      border-radius: 30px;
+      padding: 60px 40px;
+      box-shadow: 0 20px 60px rgba(233, 30, 99, 0.15);
+      text-align: center;
+      position: relative;
+      animation: fadeIn 1.5s ease-in;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .hearts {
+      font-size: 50px;
+      margin-bottom: 30px;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+    
+    .message {
+      font-size: 22px;
+      line-height: 1.9;
+      color: #444;
+      margin-bottom: 40px;
+    }
+    
+    .highlight {
+      color: #e91e63;
+      font-weight: bold;
+    }
+    
+    .signature {
+      font-size: 24px;
+      color: #e91e63;
+      font-style: italic;
+      margin-top: 30px;
+    }
+    
+    .floating-heart {
+      position: absolute;
+      color: rgba(233, 30, 99, 0.2);
+      font-size: 30px;
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(10deg); }
+    }
+    
+    @media (max-width: 600px) {
+      .container { padding: 40px 25px; }
+      .message { font-size: 18px; }
+    }
+  </style>
 </head>
 <body>
-
-<div class="screen active" id="screen1">
-  <h1>Oi Yasmim 💕</h1>
-  <p>Eu fiz esse site só pra você! Mas antes das minhas mensagens, você precisa completar 3 mini desafios fofos.</p>
-  <div class="progress-bar"><div class="progress-fill" id="progress1"></div></div>
-  <p>Desafio 1/3: Clique em 6 corações mágicos!</p>
-  <div class="hearts-grid" id="heartsGrid"></div>
-  <p id="counter">Corações: 0/6</p>
-</div>
-
-<div class="screen" id="screen2">
-  <h1>Desafio 2/3 💖</h1>
-  <p>Yasmim, qual dessas coisas eu mais amo em você?</p>
-  <div class="progress-bar"><div class="progress-fill" style="width: 66%"></div></div>
-  <div class="quiz-options">
-    <button onclick="nextScreen()">Seu sorriso que ilumina meu dia</button>
-    <button onclick="nextScreen()">Seu jeito carinhoso de ser</button>
-    <button onclick="nextScreen()">Sua risada que é música pros meus ouvidos</button>
-    <button onclick="nextScreen()">Tudo isso e muito mais!</button>
-  </div>
-</div>
-
-<div class="screen" id="screen3">
-  <h1>Desafio Final 3/3 ✨</h1>
-  <p>Clique em 8 estrelas pra coletar todo o meu amor pra você!</p>
-  <div class="progress-bar"><div class="progress-fill" style="width: 100%"></div></div>
-  <p id="starsCount">Estrelas: 0/8</p>
-  <div class="stars-container" id="starsContainer"></div>
-</div>
-
-<div class="screen" id="screen4">
-  <h1>Você conseguiu! Agora vem o melhor parte 💖</h1>
-  <div class="card" style="animation-delay: 0.2s">
-    <h2>Por que você é tão importante pra mim</h2>
-    <p>Yasmim, desde que você chegou na minha vida, tudo ficou mais colorido. Você é importante pra mim porque me faz acreditar que existem pessoas boas de verdade nesse mundo. Com você eu aprendi que amar é fácil quando a pessoa certa tá do nosso lado.</p>
-  </div>
-  <div class="card" style="animation-delay: 0.4s">
-    <h2>Seu sorriso é meu lugar favorito</h2>
-    <p>Sério Yasmim, eu podia passar o dia inteiro só olhando você sorrir. Tem dias que eu tô cansado, estressado, pra baixo... aí eu lembro do seu sorriso e parece que o mundo inteiro fica mais leve. Você nem imagina o poder que você tem sobre mim.</p>
-  </div>
-  <div class="card" style="animation-delay: 0.6s">
-    <h2>Do seu lado eu sou feliz</h2>
-    <p>Não importa o que a gente tá fazendo - conversando besteira, em silêncio, rindo até a barriga doer - do seu lado tudo vira momento especial. Yasmim, obrigado por me deixar fazer parte da sua vida. Eu te admiro, te respeito e te quero bem mais do que palavras conseguem explicar.</p>
-  </div>
-  <button onclick="location.reload()" style="margin-top: 40px;">Recomeçar do início 💫</button>
-</div>
-
-<script>
-let clickedHearts = 0; let collectedStars = 0;
-const heartsGrid = document.getElementById('heartsGrid');
-for (let i = 0; i < 9; i++) {
-  const btn = document.createElement('button');
-  btn.className = 'heart-btn'; btn.innerHTML = '🤍';
-  btn.onclick = function() {
-    if (!this.classList.contains('clicked')) {
-      this.classList.add('clicked'); this.innerHTML = '💖';
-      clickedHearts++;
-      document.getElementById('counter').textContent = `Corações: ${clickedHearts}/6`;
-      document.getElementById('progress1').style.width = (clickedHearts/6*100) + '%';
-      if (clickedHearts >= 6) { setTimeout(nextScreen, 600); }
-    }
-  };
-  heartsGrid.appendChild(btn);
-}
-function createStars() {
-  const container = document.getElementById('starsContainer');
-  for (let i = 0; i < 12; i++) {
-    const star = document.createElement('div');
-    star.className = 'star'; star.innerHTML = '⭐';
-    star.style.left = Math.random() * 85 + '%';
-    star.style.top = Math.random() * 85 + '%';
-    star.onclick = function() {
-      if (this.style.display !== 'none') {
-        this.style.display = 'none'; collectedStars++;
-        document.getElementById('starsCount').textContent = `Estrelas: ${collectedStars}/8`;
-        if (collectedStars >= 8) { setTimeout(nextScreen, 500); }
-      }
-    };
-    container.appendChild(star);
-  }
-}
-createStars();
-function nextScreen() {
-  const active = document.querySelector('.screen.active');
-  active.classList.remove('active');
-  const next = active.nextElementSibling;
-  if (next) next.classList.add('active');
-}
-const emojis = ['💖', '✨', '🌸', '💕', '⭐', '💗'];
-function createFloating() {
-  const el = document.createElement('div');
-  el.className = 'floating'; el.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
-  el.style.left = Math.random() * 100 + 'vw';
-  el.style.animationDuration = Math.random() * 5 + 8 + 's';
-  el.style.fontSize = Math.random() * 1.5 + 1.5 + 'rem';
-  document.body.appendChild(el); setTimeout(() => el.remove(), 10000);
-}
-setInterval(createFloating, 800);
-</script>
-</body>
-</html>
+  <div class="floating-heart" style="top: 10%; left: 10%;">🩷</div>
+  <div class="floating-heart" style="top: 20%; right: 15%; animation-delay: 1s;">🩷</div>
+  <div class="floating-heart" style="bottom: 15%; left: 20%; animation-delay: 2s;">🩷</div>
+  
+  <div class="container">
+    <div class="hearts">🩷</div>
+    
+    
